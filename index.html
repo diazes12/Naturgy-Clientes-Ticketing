@@ -579,20 +579,18 @@ const FIREBASE_CONFIG = {
 const ACTION_URL = "https://diazes12.github.io/Naturgy-Clientes-Ticketing/";
 
 // ─── Admin emails (sincronizado con firestore.rules) ─────────────────
-// ─── Usuarios normales permitidos
-const USER_EMAILS = [
-  'fernanda.diaz@moebiusconsulting.com',
-  'luz.idrobo@moebiusconsulting.com'
-];
-
-// ─── Todos los emails permitidos
-const ALL_ALLOWED_EMAILS = [...ADMIN_EMAILS, ...USER_EMAILS];
-
 const ADMIN_EMAILS = [
   'javier.diaz@moebiusconsulting.com',
   'mdelriot@naturgy.com',
   'jbarberab@naturgy.com'
 ];
+
+const USER_EMAILS = [
+  'fernanda.diaz@moebiusconsulting.com',
+  'luz.idrobo@moebiusconsulting.com'
+];
+
+const ALL_ALLOWED_EMAILS = [...ADMIN_EMAILS, ...USER_EMAILS];
 
 // ─── Init ─────────────────────────────────────────────────────────────
 const app  = initializeApp(FIREBASE_CONFIG);
