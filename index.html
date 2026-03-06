@@ -710,7 +710,9 @@ window.doLogout = doLogout;
 // APP MOUNT — igual que antes pero usando user.uid y user.email reales
 // ══════════════════════════════════════════════════════════════════════
 
-function mountApp(user) {
+async function mountApp(user) {
+  // Forzar refresco del token para que las Firestore Rules reciban el email
+  await user.getIdToken(true);
   const email = (user.email || '').toLowerCase();
   const priv  = ADMIN_EMAILS.includes(email);
   const info  = getUserInfo(email);
