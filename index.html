@@ -363,11 +363,11 @@ textarea{resize:vertical;min-height:96px;line-height:1.6}
       <div class="nav-section" id="sec-gestion" style="display:none">
         <div class="nav-label">Gestión</div>
         <div class="nav-item" id="nav-todos-tickets" onclick="showView('todos-tickets')"><span class="nav-icon">≡</span>Todos los Tickets</div>
-        <div class="nav-item" id="nav-sla" onclick="showView('sla')"><span class="nav-icon">◷</span>SLA y Tiempos</div>
+        <div class="nav-item" id="nav-sla" onclick="showView('sla')"><span class="nav-icon">◷</span>Tiempos y Estados</div>
       </div>
       <div class="nav-section" id="sec-info">
         <div class="nav-label">Información</div>
-        <div class="nav-item" id="nav-sla-u" onclick="showView('sla')"><span class="nav-icon">◷</span>SLA y Tiempos</div>
+        <div class="nav-item" id="nav-sla-u" onclick="showView('sla')"><span class="nav-icon">◷</span>Tiempos y Estados</div>
       </div>
     </nav>
     <div class="sidebar-footer">
@@ -488,9 +488,7 @@ textarea{resize:vertical;min-height:96px;line-height:1.6}
       <!-- SLA -->
       <div class="view" id="view-sla">
         <div class="card" style="margin-bottom:14px"><div class="card-header"><span class="card-title">Tiempos de Respuesta (SLA)</span></div><div style="padding:16px 18px"><p style="font-size:0.81rem;color:var(--text-dim);margin-bottom:16px;line-height:1.7">El tiempo de respuesta depende del nivel de impacto. Recibirás confirmación por email cuando el ticket esté en análisis.</p><table class="slat"><thead><tr><th>Impacto</th><th>Primera Respuesta</th><th>Resolución</th><th>Descripción</th></tr></thead><tbody><tr><td><span class="id2 ia">Alto</span></td><td><strong style="color:var(--red)">4 horas</strong></td><td><strong>24 horas</strong></td><td style="color:var(--text-dim);font-size:0.77rem">Afecta a múltiples usuarios o procesos críticos</td></tr><tr><td><span class="id2 im">Medio</span></td><td><strong style="color:var(--yellow)">24 horas</strong></td><td><strong>72 horas</strong></td><td style="color:var(--text-dim);font-size:0.77rem">Afecta a un proceso pero tiene alternativa</td></tr><tr><td><span class="id2 ib">Bajo</span></td><td><strong style="color:var(--green)">48 horas</strong></td><td><strong>5 días laborables</strong></td><td style="color:var(--text-dim);font-size:0.77rem">Consulta o mejora sin urgencia</td></tr></tbody></table></div></div>
-        <div class="card"><div class="card-header"><span class="card-title">Estados del Ticket</span></div><div style="padding:16px 18px;display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:10px"><div style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px"><div style="margin-bottom:5px"><span class="st sa">Abierto</span></div><div style="font-size:0.75rem;color:var(--text-dim);line-height:1.5">Ticket creado y pendiente de asignación.</div></div><div style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px"><div style="margin-bottom:5px"><span class="st san">En análisis</span></div><div style="font-size:0.75rem;color:var(--text-dim);line-height:1.5">El equipo de Conocimiento lo revisa.</div></div><div style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px"><div style="margin-bottom:5px"><span class="st sr">Resuelto</span></div><div style="font-size:0.75rem;color:var(--text-dim);line-height:1.5">Respuesta enviada. Debes validarla.</div></div><div style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px"><div style="margin-bottom:5px"><span class="st sp2">Pend. validación</span></div><div style="font-size:0.75rem;color:var(--text-dim);line-height:1.5">Se cierra en <strong style="color:var(--yellow)">48h</strong> sin respuesta.</div></div><div style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px"><div style="margin-bottom:5px"><span class="st sc2">Cerrado</span></div><div style="font-size:0.75rem;color:var(--text-dim);line-height:1.5">Caso finalizado y conocimiento registrado.</div></div></div></div>
-      </div>
-
+        <div class="card"><div class="card-header"><span class="card-title">Estados del Ticket</span></div><div style="padding:16px 18px;display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:10px"><div style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px"><div style="margin-bottom:5px"><span class="st sa">Abierto</span></div><div style="font-size:0.75rem;color:var(--text-dim);line-height:1.5">Ticket creado y pendiente de asignación.</div></div><div style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px"><div style="margin-bottom:5px"><span class="st san">En análisis</span></div><div style="font-size:0.75rem;color:var(--text-dim);line-height:1.5">El equipo de Conocimiento lo revisa.</div></div><div style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px"><div style="margin-bottom:5px"><span class="st sp2">Pend. validación</span></div><div style="font-size:0.75rem;color:var(--text-dim);line-height:1.5">Se cierra en <strong style="color:var(--yellow)">48h</strong> sin respuesta.</div></div><div style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px"><div style="margin-bottom:5px"><span class="st sc2">Cerrado</span></div><div style="font-size:0.75rem;color:var(--text-dim);line-height:1.5">Caso finalizado y conocimiento registrado.</div></div></div></div>
     </div>
   </main>
 </div>
@@ -820,7 +818,7 @@ function showView(id) {
   const nm={'dashboard':'nav-dashboard','new-ticket':'nav-new-ticket','mis-tickets':'nav-mis-tickets','todos-tickets':'nav-todos-tickets','sla':'nav-sla'};
   const ne = document.getElementById(nm[id]) || document.getElementById('nav-sla-u');
   if (ne) ne.classList.add('active');
-  const tt={'dashboard':'Dashboard','new-ticket':'Nuevo Ticket','mis-tickets':'Mis Tickets','todos-tickets':'Todos los Tickets','sla':'SLA y Tiempos'};
+  const tt={'dashboard':'Dashboard','new-ticket':'Nuevo Ticket','mis-tickets':'Mis Tickets','todos-tickets':'Todos los Tickets','sla':'Tiempos y Estados'};
   document.getElementById('page-title').textContent = tt[id]||id;
   if (id==='dashboard')    renderDash();
   if (id==='mis-tickets')  renderMis();
