@@ -518,7 +518,7 @@ textarea{resize:vertical;min-height:96px;line-height:1.6}
       <div class="admin-section" id="m-admin-section" style="display:none">
         <div class="admin-section-title">🔧 Panel de administración</div>
         <div class="admin-row">
-          <div class="admin-field"><label>Estado</label><select id="admin-status"><option>Abierto</option><option>En análisis</option><option>Resuelto</option><option>Pendiente de validación</option><option>Cerrado</option></select></div>
+          <div class="admin-field"><label>Estado</label><select id="admin-status"><option>Abierto</option><option>En análisis</option><option>Pendiente de validación</option><option>Cerrado</option></select></div>
           <div class="admin-field"><label>Impacto</label><select id="admin-impact"><option>Alto</option><option>Medio</option><option>Bajo</option></select></div>
         </div>
         <div class="admin-field" style="margin-bottom:10px"><label>Comentario interno / resolución</label><textarea id="admin-comment" placeholder="Añade notas internas, resolución del caso o cualquier comentario relevante..."></textarea></div>
@@ -579,6 +579,15 @@ const FIREBASE_CONFIG = {
 const ACTION_URL = "https://diazes12.github.io/Naturgy-Clientes-Ticketing/";
 
 // ─── Admin emails (sincronizado con firestore.rules) ─────────────────
+// ─── Usuarios normales permitidos
+const USER_EMAILS = [
+  'fernanda.diaz@moebiusconsulting.com',
+  'luz.idrobo@moebiusconsulting.com'
+];
+
+// ─── Todos los emails permitidos
+const ALL_ALLOWED_EMAILS = [...ADMIN_EMAILS, ...USER_EMAILS];
+
 const ADMIN_EMAILS = [
   'javier.diaz@moebiusconsulting.com',
   'mdelriot@naturgy.com',
