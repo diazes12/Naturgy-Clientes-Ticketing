@@ -714,7 +714,8 @@ window.doLogout = doLogout;
 
 async function mountApp(user) {
   // Forzar refresco del token para que las Firestore Rules reciban el email
-  await user.getIdToken(true);
+await user.getIdToken(true);
+await new Promise(resolve => setTimeout(resolve, 1500));
   const email = (user.email || '').toLowerCase();
   const priv  = ADMIN_EMAILS.includes(email);
   const info  = getUserInfo(email);
