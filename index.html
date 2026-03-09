@@ -736,7 +736,7 @@ await new Promise(resolve => setTimeout(resolve, 1500));
   document.getElementById('sec-info').style.display         = cu.priv ? 'none'  : 'block';
   document.getElementById('f-email').value = cu.email;
 
-  startListening();
+setTimeout(() => startListening(), 3000);
   if (cu.priv) showView('dashboard'); else showView('mis-tickets');
 }
 
